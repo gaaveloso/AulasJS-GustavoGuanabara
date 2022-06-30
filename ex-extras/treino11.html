@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O número é par ou ímpar?</title>
+</head>
+<body>
+    <h1>É par ou é ímpar?</h1>
+    <button onclick="calcular()">Clique para iniciar</button>
+    <section id="resultado">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+    <script>
+        function calcular() {
+            var numero=Number(prompt('Digite um número'))
+            var res=window.document.getElementById('resultado')
+            if ( numero % 2 == 0) {
+                res.innerHTML=`<p><strong>O número ${numero} é PAR`
+            } else {
+                res.innerHTML=`<p><strong>O número ${numero} é IMPAR`
+            }
+        }
+    </script>
+</body>
+</html>

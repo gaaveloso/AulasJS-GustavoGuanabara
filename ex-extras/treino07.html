@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos</title>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+    <section id="resultado">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+</body>
+<script>
+    function calcular(){
+        var n=Number(prompt('Digite um número: '))
+        var res=window.document.getElementById('resultado')
+        var partei=Math.trunc(n)
+        var parteip=Math.round(n)
+        var raizq=Math.sqrt(n)
+        var raizc=Math.cbrt(n)
+        var nq=n ** 2
+        var nc=n ** 3
+        res.innerHTML=`<p>O número a ser analisado aqui será o <strong>${n}</strong>`
+        res.innerHTML+='<p>--------------------------------------------------------------------'
+        res.innerHTML+=`<p>O seu valor absoluto é ${n}`
+        res.innerHTML+=`<p>A sua parte inteira é ${partei}`
+        res.innerHTML+=`<p>O valor inteiro mais próximo é ${parteip}`
+        res.innerHTML+=`<p>A sua raiz quadrada é ${raizq}`
+        res.innerHTML+=`<p>A sua raiz cúbica é ${raizc}`
+        res.innerHTML+=`<p>O valor de ${n}² é ${nq}`
+        res.innerHTML+=`<p>O valor de ${n}³ é ${nc}`
+    }
+</script>
+</html>

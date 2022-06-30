@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            background: rgb(174, 184, 184);
+            font: normal 20pt Arial;
+        }
+        .soma{
+            color: red;
+        }
+        .sub{
+            color: yellow;
+        }
+        .botao{
+            color: rgb(68, 2, 38);
+            background-color: pink;
+            font-size: 20px;
+            font-weight: bold;
+            width: 200px;
+            background-image: url("https://cdn.pixabay.com/photo/2019/01/02/02/37/background-3907905_960_720.jpg")
+        }
+        input {
+            width: 80px;
+            height: 50px;
+            background-color: rgb(0, 218, 207);
+            
+        }
+        span {
+            color: white;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <div id="soma">
+    <h2 class="soma">Soma</h2>
+    <input type="number" name= "s1" id="s1"> <span>+</span>
+    <input type="number" name= "s2" id="s2">
+    <input class="botao"type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+       function somar () {
+            var ts1=window.document.getElementById('s1') // TS = TOTAL SOMA
+            var ts2=window.document.getElementById('s2')
+            var res=window.document.getElementById('res') // RES = RESULTADO
+            var sn1=Number(ts1.value) // SN = SOMA NUMERO
+            var sn2=Number(ts2.value)
+            var rsf=sn1 + sn2  // RSF = RESULTADO SOMA FINAL
+            res.innerHTML = `A soma entre ${sn1} e ${sn2} é igual a <strong>${rsf}</strong>`
+       }
+    </script>
+    </div>
+    <div>
+        <h2 class="sub">Subtração</h2>
+        <input type="number" name= "m1" id="m1"> <span>-</span>
+        <input type="number" name= "m2" id="m2">
+        <input class="botao" type="button" value="subtrair" onclick="subtrair()">
+        <div id="res2">Resultado</div>
+        <script>
+            function subtrair () {
+                var tm1=window.document.getElementById('m1')
+                var tm2=window.document.getElementById('m2')
+                var res=window.document.getElementById('res2')
+                var mn1=Number(tm1.value)
+                var mn2=Number(tm2.value)
+                var rmf=mn1 - mn2
+                res2.innerHTML = `A subtração entre ${mn1} e ${mn2} é igual a <strong>${rmf}</strong>`
+            }
+        </script>
+    </div>
+    <div>
+        <h2>Multiplicação</h2>
+        <input type="number" name="mt1" id="mt1"> <span>x</span>
+        <input type="number" name="mt2" id="mt2">
+        <input class="botao" type="button" value="multiplicar" onclick="multiplicar()">
+        <div id="res3">Resultado</div>
+        <script>
+            function multiplicar () {
+                var tmt1=window.document.getElementById('mt1')
+                var tmt2=window.document.getElementById('mt2')
+                var res=window.document.getElementById('res3')
+                var mtn1=Number(tmt1.value)
+                var mtn2=Number(tmt2.value)
+                var tmt=mtn1 * mtn2
+                res3.innerHTML = `A multiplicação entre ${mtn1} e ${mtn2} é igual a <strong>${tmt}</strong>`
+            }
+        </script>
+    </div>
+    <div>
+        <h2>Divisão</h2>
+        <input type="number" name="d1" id="d1"> <span>/</span>
+        <input type="number" name="d2" id="d2">
+        <input class="botao" type="button" value="dividir" onclick="dividir()">
+        <div id="res4">Resultado</div>
+        <script>
+            function dividir () {
+                var td1=window.document.getElementById('d1')
+                var td2=window.document.getElementById('d2')
+                var res=window.document.getElementById('res4')
+                var tdn1=Number(td1.value)
+                var tdn2=Number(td2.value)
+                var tdt=tdn1 / tdn2
+                res4.innerHTML = `A divisão entre ${tdn1} e ${tdn2} é igual a <strong>${tdt}</strong>`
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

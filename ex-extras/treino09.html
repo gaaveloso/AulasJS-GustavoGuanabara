@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Externo</h1>
+    <button onclick="acao1()">Ação 1</button>
+    <button onclick="acao2()">Ação 2</button>
+    <button onclick="acao3()">Ação 3</button>
+    <button onclick="acao4()">Ação 4</button>
+    <button onclick="limpar()">Limpar Tela</button>
+    <section id="saida">
+        <p>Aqui vou registrar suas ações com os botões acima.</p>
+    </section>
+</body>
+<script>
+    var resp = window.document.getElementById('saida')
+    function acao1(){
+        resp.innerHTML+='<p>Você clicou no primeiro botão'
+    }
+    function acao2(){
+        resp.innerHTML+='<p>Você clicou no segundo botão'
+    }
+    function acao3(){
+        resp.innerHTML+='<p>Você clicou no terceiro botão'
+    }
+    function acao4(){
+        resp.innerHTML+='<p>Você clicou no quarto botão'
+    }
+    function limpar(){
+        resp.innerHTML='<p>Aqui vou registrar suas ações com os botões acima.'
+    }
+</script>
+</html>

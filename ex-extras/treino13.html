@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com o sistema</title>
+</head>
+<body>
+    <h1>Interagindo com o sistema</h1>
+    <button onclick="clicar()">Clique em mim</button>
+    <section id="resultado">
+        <p>Aqui vai acontecer algo...</p>
+    </section>
+    <script>
+        function clicar(){
+            var res=window.document.getElementById('resultado')
+            var agora=new Date
+            res.innerHTML=`<p>O que eu recebi do sistema foi ${agora}.`
+        }
+    </script>
+</body>
+</html>

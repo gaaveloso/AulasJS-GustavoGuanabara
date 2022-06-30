@@ -1,0 +1,20 @@
+<h1> = Cabeçalho
+<p> = Paragrafo
+<div> = Divisão
+<title> = Titulo da aba
+<style>
+	   background: *\\cor no fundo da tela
+	   color: *\\ cor das letras
+	   font: normal 18pt(tamanho) Arial(nome)
+	  *\\ sempre usar body dentro do style
+	   width: (numero)px *\\ largura
+	   height: (numero)px *\\ altura
+	   line-height: (mesmo numero do height)px *\\ centraliza altura
+	   text-align: center; *\\ centraliza largura
+</style>
+<strong> = Deixa em negrito
+
+Div é representado por #
+Class é representado por .
+
+(variavel).addEventListener('comando', escrita) = adiciona evento a alguma variavel
